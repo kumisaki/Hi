@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Popover } from 'antd';
 
 const { SubMenu } = Menu;
 const {
@@ -34,7 +34,24 @@ class Main extends Component {
       }]
     }
   };
-
+  transSideMenu = (item) => {
+    const itemKey = item.key ? item.key : ' - ';
+    let tips = '';
+    switch (itemKey) {
+      case '11':
+        tips = 'photos';
+        break;
+      case '12':
+        tips = 'collections';
+        break;
+      case '13':
+        tips = 'others';
+        break;
+      default:
+        break;
+    }
+    return tips;
+  }
   render() {
     const { menu } = this.state;
     return (
@@ -46,12 +63,21 @@ class Main extends Component {
           style={{ height: '100%' }}
         >{
             menu.map((item, index) => (
-              <SubMenu key={item.key} title={<span>{item.title}</span>}>
+              <SubMenu key={item.key} title={
+                <div>
+                  <Popover
+                    content={this.transSideMenu(item)}
+                  >
+                    {item.title}
+                  </Popover>
+                </div>}>
                 {
                   (item.children.length > 0)
                     ?
                     item.children.map((item, index) => (
-                      <Menu.Item key={item.key}>{item.title}</Menu.Item>
+                      <Menu.Item key={item.key}>
+                          {item.title}
+                      </Menu.Item>
                     ))
                     :
                     null
