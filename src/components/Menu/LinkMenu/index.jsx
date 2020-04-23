@@ -6,14 +6,14 @@ class Main extends Component {
     super(props);
     this.state = {
       menu: [{
-        title: '小院',
-        key: '1',
-      }, {
-        title: '紫藤架',
-        key: '11',
-      }, {
-        title: '茶桌',
-        key: '111'
+      //   title: '首页',
+      //   key: '1',
+      // }, {
+      //   title: '图册',
+      //   key: '11',
+      // }, {
+      //   title: '笔记',
+      //   key: '111'
       }]
     }
   };

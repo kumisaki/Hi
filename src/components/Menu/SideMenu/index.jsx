@@ -11,24 +11,24 @@ class Main extends Component {
     super(props);
     this.state = {
       menu: [{
-        title: '紫藤架',
+        title: '旅行',
         key: '11',
         children: [{
-          title: '茶桌',
+          title: '建设中。。。',
           key: '111'
         }]
       }, {
-        title: '小池',
+        title: '静物',
         key: '12',
         children: [{
-          title: '假山',
+          title: '建设中。。。',
           key: '121'
         }]
       }, {
-        title: '空地',
+        title: '爱好',
         key: '13',
         children: [{
-          title: '秋千',
+          title: '建设中。。。',
           key: '131'
         }]
       }]

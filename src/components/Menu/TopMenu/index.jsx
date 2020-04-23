@@ -10,13 +10,13 @@ class Main extends Component {
     super(props);
     this.state = {
       menu:[{
-        title:'小院',
+        title:'首页',
         key:'home',
       },{
-        title:'车库',
+        title:'图册',
         key:'tech',
       },{
-        title:'书房',
+        title:'笔记',
         key:'den',
       }]
     }
